@@ -45,7 +45,6 @@
 }
 
 
-
 .container_fluid{ width: 100%;}
 
 /** Header Start  **/
@@ -94,5 +93,49 @@ header{
 }
 
 /*** How it works **/
-
-
+.how-work{
+    @include section-space;
+    text-align: $textcenter;
+    h2{
+        @include subHeading;
+        padding-bottom: 45px;
+    }
+    p{
+        @include bodycopy;
+        padding: 10px 0;
+    }
+    ul{
+        counter-reset: list1;
+        width: 100%;
+        max-width: 1290px;
+        margin: 20px auto;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        li{
+            position: relative;
+            padding-top: 60px;
+            width: 21%;
+            margin: 0 2.5%;
+            margin-bottom: 45px;
+            &::after{
+                @include afterbefore;
+                counter-increment: list1;
+                content: counter(list1);
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 45px;
+                margin: 0 auto;
+                background-color: #EDEBEB;
+                color: #C3CF21;
+                font-weight: $bold;
+                font-size: 22px;
+            }
+        }
+    }
+    .getbutton{margin-top: 45px;}
+}
