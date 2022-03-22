@@ -1,0 +1,98 @@
+@import "helper/reset";
+
+/*Common btn */ 
+%buttondesign {
+    height: 50px;
+    width: 240px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:after{
+        @include afterbefore;
+         background: rgba(0,0,0,0.08);
+         @include transtionslow;
+         height: 0px;
+    }
+    &:hover
+    { @include transtionslow;
+        &:after{
+            @include afterbefore;
+             background: rgba(0,0,0,0.08);
+             @include transtionslow;
+             height: 100%;
+        }
+    }
+}
+.white-btn {
+    @extend %buttondesign;
+    background-color: $white;
+    color: $greydark;
+}
+.green-btn {
+    @extend %buttondesign;
+    color: #F7F7F7;
+    background-color: #C3CF21;
+    &:hover{
+        color: #fff;
+    }
+}
+
+
+
+.container_fluid{ width: 100%;}
+
+/** Header Start  **/
+
+header{
+    @include flexcenterbetween;
+    .logo{
+        font-size: 40px;
+        font-family: $antonFont;
+        padding:12px 42px;
+        color: #343434;
+        text-transform: uppercase;
+    }
+    .getbutton{
+        margin: 3px 30px;
+    }
+}
+
+/*** Banner **/
+.banner-main{ 
+    text-align: center;
+    background: url(../images/banner01.jpg) no-repeat 50%;
+    background-size: cover;
+    min-height: 571px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .banner_container{
+        max-width: 632px;
+        text-shadow: 0 5px 14px 0 rgba(0,0,0,0.5);
+        h1{
+            font-size: $font48;
+            color: $white;
+        }
+        p{
+            font-size: $font26;
+            font-weight: $bold;
+            color: $white;
+            margin-bottom: 46px;
+            small{
+                font-size: $font16;
+            }
+        }
+    }
+}
+
+/*** How it works **/
+
+

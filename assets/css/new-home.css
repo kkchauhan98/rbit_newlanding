@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap");
+/* iPadPro needs work */
+body {
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+  padding: 0px;
+  margin: 0px; }
+
+a,
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: inherit; }
+
+input,
+button,
+a {
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease; }
+
+input,
+input:focus,
+button,
+button:focus {
+  outline: none;
+  border-color: inherit; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/*Common btn */
+.white-btn, .green-btn {
+  height: 50px;
+  width: 240px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .white-btn:after, .green-btn:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    height: 0px; }
+  .white-btn:hover, .green-btn:hover {
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; }
+    .white-btn:hover:after, .green-btn:hover:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+      height: 100%; }
+
+.white-btn {
+  background-color: #fff;
+  color: #333333; }
+
+.green-btn {
+  color: #F7F7F7;
+  background-color: #C3CF21; }
+  .green-btn:hover {
+    color: #fff; }
+
+.container_fluid {
+  width: 100%; }
+
+/** Header Start  **/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header .logo {
+    font-size: 40px;
+    font-family: "Anton";
+    padding: 12px 42px;
+    color: #343434;
+    text-transform: uppercase; }
+  header .getbutton {
+    margin: 3px 30px; }
+
+/*** Banner **/
+.banner-main {
+  text-align: center;
+  background: url(../images/banner01.jpg) no-repeat 50%;
+  background-size: cover;
+  min-height: 571px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .banner-main .banner_container {
+    max-width: 632px;
+    text-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.5); }
+    .banner-main .banner_container h1 {
+      font-size: 48px;
+      color: #fff; }
+    .banner-main .banner_container p {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 46px; }
+      .banner-main .banner_container p small {
+        font-size: 16px; }
+
+/*** How it works **/
+
+/*# sourceMappingURL=new-home.css.map */

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap');
+
+/* iPadPro needs work */
+$iPadPro: "(min-device-width: 1024px) and (max-device-width: 1366px)";
+$tablet: "(min-width: 768px) and (max-width: 1024px)";
+$tabletLandscape: "(min-width: 768px) and (max-width: 1024px) and (orientation : landscape)";
+$desktop: "(min-width: 1024px)";
+$phone: "(min-device-width: 320px) and (max-device-width: 736px)";
+$phone6: "(min-device-width: 375px) and (max-device-width: 667px)";
+$phone6Plus: "(min-device-width: 414px) and (max-device-width: 736px)";
+
+// Custom media
+$desktop1199: "(max-width: 1199px)";
+$tablet1024: "(max-width: 1024px)";
+$tablet991: "(max-width: 991px)";
+$phone768: "(max-width: 768px)";
+$phone767: "(max-width: 767px)";
+$phone667: "(max-width: 667px)";
+$phone320: "(max-width: 320px)";
+// Custom media
+
+//Font Family
+$popineFont: 'Poppins';
+$montserratFont: 'Montserrat';
+$antonFont:'Anton';
+
+$bolder:800;
+$bold:600;
+$semibold:500;
+$normal:400;
+$light:300;
+
+$font16:16px;
+$font20:20px;
+$font24:24px;
+$font26:26px;
+$font30:30px;
+$font36:36px;
+$font48:48px;
+
+
+// colors
+$white:#fff;
+$black:#000;
+$greydark:#333333;
+$greylight:#9A9A9B;
+$bodycopy:#646A78;
+$gray:#313131;
+
+@mixin section-space{
+  padding: 75px 0;
+}
+
+@mixin list-type-none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin flex-css {
+  display:-webkit-flex;
+ display:flex;
+ -webkit-flex-wrap:wrap;
+ flex-wrap:wrap;
+ -webkit-align-items:center;
+ align-items:center;
+ -webkit-align-content:center;
+ align-content:center;
+}
+
+@mixin flexallcenter{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+@mixin flexcenterbetween{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+@mixin bodycopy{
+    color: $greylight;
+    font-family: $montserratFont;
+    font-size: $font16;
+    font-weight: $semibold;
+    letter-spacing: 0;
+    line-height: 19px;
+}
+
+@mixin subHeading{
+    font-family:$montserratFont;
+    font-weight: $bold;
+    font-size:$font36;
+    letter-spacing: 1.02px;
+    line-height: 39px;
+    color:$greydark;
+}
+
+@mixin afterbefore{
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+@mixin transtionslow{
+  transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
