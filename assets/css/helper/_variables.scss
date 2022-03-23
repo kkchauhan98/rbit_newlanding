@@ -27,6 +27,7 @@ $antonFont:'Anton';
 $textcenter: center;
 
 $bolder:800;
+$bold700:700;
 $bold:600;
 $semibold:500;
 $normal:400;
@@ -48,9 +49,16 @@ $greydark:#333333;
 $greylight:#9A9A9B;
 $bodycopy:#646A78;
 $gray:#313131;
+$bggrey:#EDEEEE;
 
+
+@mixin scale{
+  max-width:100%; 
+  height:auto; 
+  width:auto\9;
+}
 @mixin section-space{
-  padding: 75px 0;
+  padding: 70px 0;
 }
 
 @mixin list-type-none {
@@ -91,10 +99,7 @@ $gray:#313131;
 
 @mixin subHeading{
     font-family:$montserratFont;
-    font-weight: $bold;
-    font-size:$font36;
-    letter-spacing: 1.02px;
-    line-height: 39px;
+    font-weight: $bold700;
     color:$greydark;
 }
 
