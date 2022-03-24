@@ -10,13 +10,12 @@ $phone6: "(min-device-width: 375px) and (max-device-width: 667px)";
 $phone6Plus: "(min-device-width: 414px) and (max-device-width: 736px)";
 
 // Custom media
-$desktop1199: "(max-width: 1199px)";
-$tablet1024: "(max-width: 1024px)";
-$tablet991: "(max-width: 991px)";
-$phone768: "(max-width: 768px)";
-$phone767: "(max-width: 767px)";
-$phone667: "(max-width: 667px)";
-$phone320: "(max-width: 320px)";
+$desktop1156: "(max-width: 1156px)";
+$ipad1024: "(max-width: 1023px)";
+$ipad768: "(max-width: 990px)";
+$tablet767: "(max-width: 767px)";
+$phone599: "(max-width: 599px)";
+$phone479: "(max-width: 479px)";
 // Custom media
 
 //Font Family
@@ -59,6 +58,9 @@ $bggrey:#EDEEEE;
 }
 @mixin section-space{
   padding: 70px 0;
+  @media #{$phone599}{
+    padding: 40px 0;
+  }
 }
 
 @mixin list-type-none {

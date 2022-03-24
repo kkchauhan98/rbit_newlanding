@@ -32,21 +32,26 @@
     <div class="logo">
         Suburban Jungle
     </div>
-    <a href="#" class="getbutton green-btn">Get Started</a>
+    <a href="#" class="hidemobile getbutton green-btn">Get Started</a>
 </header>
 
 <!-- Banner -->
-<section class="banner-main">
+<section>
+    <div class="banner-main">
     <div class="banner_container">
         <h1>Find your way home. </h1>
-        <p> Ready to find a new town to call “home” — but don’t know where to start? We can help. 
+        <p class="hidemobile"> Ready to find a new town to call “home” — but don't know where to start? We can help. 
             Our award-winning, town-first approach helps you explore like a pro. </p>
         <div>
             <a href="#" class="getbutton white-btn">Get Started</a>
         </div>
         <p><small>Our services are 100% free</small></p>
     </div>
-
+</div>
+    <div class="bannartext_mobile hidedesktop">
+        <p> Ready to find a new town to call “home” — but don't know where to start? We can help. 
+            Our award-winning, town-first approach helps you explore like a pro. </p>
+    </div>
 </section>
 
 <!-- How to work -->
@@ -175,6 +180,7 @@
             </li>
             
         </ul>
+        <div class="textcenter"><a href="#" class="getbutton green-btn" id="seeMore">See more</a></div>
     </div>
 </section>
 
@@ -263,12 +269,13 @@
             <div class="leftfooter">
                 <p>© 2022. Suburban Jungle, Inc. All rights reserved.</p>
                 <p>Address: 135 East 57th Street 14th Floor NYC 10022 | Ph: (646) 213-0090</p>
+                <p class="d2">Photos Source: D2 Interieurs</p>
                 <ul>
                     <li><a href="">Fair Housing</a></li>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms of Use</a></li>
                 </ul>
-                <p>Photos Source: D2 Interieurs</p>
+                
             </div>
             <div class="rightfooter">
                 <a href=""><img src="assets/images/playstore.png" alt=""></a>
@@ -307,7 +314,7 @@ $('.feature_slider').slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 700,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2
@@ -322,7 +329,43 @@ $('.feature_slider').slick({
     }
   ]
 });
+
 });
+
+
+
+
+$("#seeMore").click(function(e){
+    e.preventDefault();
+    $(".explore_town li:hidden").slice(0,3).fadeIn("slow");
+    if($(".explore_town li:hidden").length == 0){
+        $("#seeMore").fadeOut("fast");
+    }
+    // $('html,body').animate({
+    //     scrollTop: $(this).offset().top
+    // }, 3000);
+});
+  
+if (window.matchMedia("only screen and (max-width:767px)").matches) {
+    $(".explore_town li").hide(); 
+    $(".explore_town li").slice(0,3).show(); 
+    $("#seeMore").show();
+} 
+else { 
+    $(".explore_town li").show();
+    $("#seeMore").hide();
+    
+    } 
+    $(window).resize(function () { 
+        if (window.matchMedia("only screen and (max-width:767px)").matches) { 
+            $(".explore_town li").hide(); 
+            $(".explore_town li").slice(0,3).show();
+            $("#seeMore").show();
+        } else { 
+            $(".explore_town li").show(); 
+            $("#seeMore").hide();
+        } 
+    });
 </script>
 
 </body>

@@ -71,19 +71,27 @@ h4{
     }
 }
 .textcenter{ text-align: center;}
-
+.hidedesktop{ display: none;}
 .container_fluid{ width: 100%;}
+
 
 /** Header Start  **/
 
 header{
     @include flexcenterbetween;
+    @media #{$tablet767} {
+        justify-content: center;
+    }
     .logo{
         font-size: 40px;
         font-family: $antonFont;
         padding:12px 42px;
         color: #343434;
         text-transform: uppercase;
+        @media #{$tablet767} {
+            padding: 12px 0;
+            font-size: $font30;
+        }
     }
     .getbutton{
         margin: 3px 30px;
@@ -100,22 +108,40 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+    @media #{$tablet767} {
+        min-height: 300px;
+    }
     .banner_container{
         max-width: 632px;
         text-shadow: 0 5px 14px rgba(0,0,0,0.5);
         h1{
             font-size: $font48;
             color: $white;
+            @media #{$tablet767} {
+                font-size: $font30;
+                padding-bottom: 30px;
+            }
+            @media #{$phone599}{
+                width: 250px;
+                line-height: $font36;
+            }
         }
         p{
             font-size: $font26;
             font-weight: $bold;
             color: $white;
-            margin-bottom: 46px;
+            margin-bottom: 45px;
+            @media #{$tablet767} {
+                margin-bottom: 0px;
+            }
             & small{
                 font-size: $font16;
             }
+            &:last-child{
+                margin-bottom: 0px
+            }
         }
+        
     }
 }
 
@@ -123,6 +149,10 @@ header{
 .how-work{
     @include section-space;
     text-align: $textcenter;
+    @media #{$phone599}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     p{
         @include bodycopy;
         padding: 10px 0;
@@ -137,12 +167,24 @@ header{
         justify-content: center;
         align-items: flex-start;
         flex-wrap: wrap;
+        box-sizing: border-box;
+        @media #{$tablet767} {
+            padding: 0 15px;
+        }
         li{
             position: relative;
             padding-top: 60px;
             width: 24%;
             margin: 0 2.5%;
             margin-bottom: 45px;
+            box-sizing: border-box;
+            @media #{$tablet767}{
+                 width: 100%;
+            }
+            @media #{$phone599}{
+                padding-top: 50px;
+                margin-bottom: 30px;
+            }
             &::after{
                 @include afterbefore;
                 counter-increment: list1;
@@ -160,12 +202,19 @@ header{
             }
         }
     }
-    .getbutton{margin-top: 45px;}
+    .getbutton{margin-top: 45px;
+        @media #{$tablet767}{
+            margin-top: 30px;
+        }
+    }
 }
 
 /*** Together **/
 .together-wrap{
     padding: 103px 0 64px 0;
+    @media #{$tablet767}{
+        padding: 0px;
+    }
     .bg_grey{
         background: $bggrey;
     }
@@ -178,10 +227,16 @@ header{
         .left-content{
             padding: 50px 0 50px 100px;
             max-width: 370px;
+            @media #{$tablet767}{
+                padding: 50px 15px;
+                max-width: 100%;
+                text-align: center;
+            }
             p{
                 @include bodycopy;
                 padding: 10px 0;
                 width: 85%;
+                @media #{$tablet767}{ width: 100%;}
             }
             .getbutton{margin-top: 20px;}
         }
@@ -190,6 +245,14 @@ header{
             top: -100px;
             right: 0;
             width: 26%;
+            @media #{$ipad768} {
+                top: -80px;
+                right: 15px;
+                width: 30%;
+            }
+            @media #{$tablet767} {
+                display: none;
+            }
             & img{
                 @include scale;
             }
@@ -204,6 +267,9 @@ header{
     &_container {
         max-width: 1158px;
         margin: 0 auto;
+        @media #{$tablet767}{
+            padding: 0 15px;
+        }
         & h2{
             padding-bottom: 15px;
         }
@@ -212,50 +278,30 @@ header{
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
+            @media #{$tablet767}{
+                margin-bottom: 30px;
+            }
             li {
                 width: 100%;
                 max-width: 315px;
                 position: relative;
                 border-radius: 5px;
+                display: list-item;
                 margin: 35px;
+                display: none;
                 overflow: hidden;
                 box-shadow: 0 3px 10px 5px rgba(121,116,139,0.2);
                 cursor: pointer;
-                @media #{$desktop1199} {
-                    width: 46%;
-                    max-width: 46%;
-                    border-radius: 8px;
-                    margin-right: 10px;
-                    margin-bottom: 20px;
-                    display: inline-block;
-                    margin-left: 10px;
+                
+                @media #{$desktop1156} {
+                    max-width: 30%;
+                    margin: 20px 10px 0 10px;
                 }
-                @media #{$tablet1024} {
-                    width: 47%;
-                    max-width: 47%;
-                    border-radius: 8px;
-                    margin-right: 10px;
-                    margin-bottom: 20px;
-                    display: inline-block;
-                    margin-left: 10px;
+                @media #{$tablet767}{
+                    max-width: 50%;
                 }
-                @media #{$tablet991} {
-                }
-                @media #{$phone768} {
-                    width: 47%;
-                    max-width: 47%;
-                    border-radius: 8px;
-                    margin-right: 10px;
-                    margin-bottom: 20px;
-                    display: inline-block;
-                    margin-left: 10px;
-                }
-                @media #{$phone767} {
-                    margin-right: 0;
-                    margin-bottom: 28px;
-                    width: 100%;
-                    max-width: 100%;
-                    margin-left: 0;
+                @media #{$phone599}{
+                    max-width: 85%;
                 }
                 & img {
                     width: 100%;
@@ -308,7 +354,14 @@ header{
         max-width: 1158px;
         margin: 0 auto;
         .head_with_para{
-            p{ width: 50%; margin: 0 auto;}
+            @media #{$tablet767}{
+                padding: 0 15px;
+            }
+            p{ width: 50%; margin: 0 auto;
+                @media #{$tablet767}{
+                    width: 100%;
+                }
+            }
         }
         .green-btn{ margin-top: 20px;}
     }
@@ -327,6 +380,16 @@ header{
         background-color: #FFFFFF;
         box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1);
         @include transtionslow;
+        @media #{$desktop1156} {
+            max-width: 30%;
+            margin: 20px 10px;
+        }
+        @media #{$tablet767}{
+            max-width: 50%;
+        }
+        @media #{$phone599}{
+            max-width: 85%;
+        }
         & img {
           width: 100%;
           height: auto;
@@ -354,6 +417,9 @@ header{
     &__container{
         max-width: 1200px;
         margin: 0 auto;
+        @media #{$desktop1156} {
+            padding: 0 35px;
+        }
     }
     & h3{
         font-size: $font30;
@@ -412,16 +478,41 @@ footer {
     @include section-space;
     background: $bggrey;
     padding-top: 40px;
+    @media #{$tablet767}{
+        padding: 40px 0;
+    }
     .footer_container {
         max-width: 1250px;
         margin: 0 auto;
+        @media #{$desktop1156} {
+            padding: 0 35px;
+        }
         .footerwrap{
             @include flexallcenter;
             justify-content: space-between;
+            @media #{$tablet767}{
+               justify-content: center;
+               flex-wrap: wrap;
+            }
             .leftfooter
-            {
+            { display: flex;
+                flex-wrap: wrap;
+                @media #{$tablet767}{
+                    justify-content: center;
+                    text-align: center;
+                  }
                 p{
                     @include bodycopy;
+                    width: 100%;
+                    padding: 0 0 8px 0;
+                }
+                .d2{
+                    order: 2;
+                    @media #{$tablet767}{
+                        order: 0;
+                        font-size: 14px;
+                        padding-top: 5px;
+                    }
                 }
                 ul
                 {
@@ -440,7 +531,14 @@ footer {
             .rightfooter{
                 text-align: right;
                 padding-top: 10px;
-                & img{ width: auto; height: 60px; margin-bottom: 35px;}
+                @media #{$tablet767}{
+                    text-align: center;
+                }
+                & img{ width: auto; height: 60px; margin-bottom: 35px;
+                    @media #{$tablet767}{
+                        height: 50px;
+                    }
+                }
                 & ul{
                     display: flex;
                     justify-content: flex-end;
@@ -474,5 +572,20 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media #{$tablet767} {
+    .hidemobile {display: none;}
+    .hidedesktop{ display: block;}
+    
+}
+.bannartext_mobile{
+    background-color: $bggrey;
+    padding:30px 30px;
+    @media #{$tablet767} {
+        font-size: $font20;
+        line-height: $font30;
+        text-align: center;
     }
 }
