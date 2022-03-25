@@ -92,6 +92,10 @@ header{
             padding: 12px 0;
             font-size: $font30;
         }
+        a{
+            cursor: pointer;
+            color: #343434;
+        }
     }
     .getbutton{
         margin: 3px 30px;
