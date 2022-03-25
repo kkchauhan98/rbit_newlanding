@@ -32,8 +32,8 @@
 }
 .white-btn {
     @extend %buttondesign;
-    background-color: $white;
-    color: $greydark;
+    background-color: $nHomewhite;
+    color: $nHomegreydark;
 }
 .green-btn {
     @extend %buttondesign;
@@ -45,29 +45,29 @@
 }
 
 h2.subhead{
-    @include subHeading;
+    @include sub_Heading;
     padding-bottom: 45px;
-    font-size: $font36;
+    font-size: $nHomefont36;
     line-height: 39px;
 }
-h3{
-    @include subHeading;
+h3.h3head{
+    @include sub_Heading;
     padding-bottom: 10px;
-    font-size: $font24;
+    font-size: $nHomefont24;
     line-height: 26px;
 }
-h4{
-    @include subHeading;
+h4.h4head{
+    @include sub_Heading;
     padding: 10px 0 0 0;
-    font-size: $font20;
-    color: $greydark;
+    font-size: $nHomefont20;
+    color: $nHomegreydark;
 }
 .head_with_para{
     h2{
         padding-bottom: 20px;
     }
     p{
-        @include bodycopy;
+        @include body_copy;
     }
 }
 .textcenter{ text-align: center;}
@@ -77,20 +77,20 @@ h4{
 
 /** Header Start  **/
 
-header{
+.nHome_header{
     @include flexcenterbetween;
-    @media #{$tablet767} {
+    @media #{$nHometablet767} {
         justify-content: center;
     }
-    .logo{
+    .nHome_logo{
         font-size: 40px;
-        font-family: $antonFont;
+        font-family: $nHomeantonFont;
         padding:12px 42px;
         color: #343434;
         text-transform: uppercase;
-        @media #{$tablet767} {
+        @media #{$nHometablet767} {
             padding: 12px 0;
-            font-size: $font30;
+            font-size: $nHomefont30;
         }
         a{
             cursor: pointer;
@@ -112,34 +112,34 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    @media #{$tablet767} {
+    @media #{$nHometablet767} {
         min-height: 300px;
     }
     .banner_container{
         max-width: 632px;
         text-shadow: 0 5px 14px rgba(0,0,0,0.5);
         h1{
-            font-size: $font48;
-            color: $white;
-            @media #{$tablet767} {
-                font-size: $font30;
+            font-size: $nHomefont48;
+            color: $nHomewhite;
+            @media #{$nHometablet767} {
+                font-size: $nHomefont30;
                 padding-bottom: 30px;
             }
-            @media #{$phone599}{
+            @media #{$nHomephone599}{
                 width: 250px;
-                line-height: $font36;
+                line-height: $nHomefont36;
             }
         }
         p{
-            font-size: $font26;
-            font-weight: $bold;
-            color: $white;
+            font-size: $nHomefont26;
+            font-weight: $nHomebold;
+            color: $nHomewhite;
             margin-bottom: 45px;
-            @media #{$tablet767} {
+            @media #{$nHometablet767} {
                 margin-bottom: 0px;
             }
             & small{
-                font-size: $font16;
+                font-size: $nHomefont16;
             }
             &:last-child{
                 margin-bottom: 0px
@@ -151,14 +151,14 @@ header{
 
 /*** How it works **/
 .how-work{
-    @include section-space;
-    text-align: $textcenter;
-    @media #{$phone599}{
+    @include section_space;
+    text-align: $nHometextcenter;
+    @media #{$nHomephone599}{
         padding-left: 15px;
         padding-right: 15px;
     }
     p{
-        @include bodycopy;
+        @include body_copy;
         padding: 10px 0;
     }
     ul{
@@ -172,7 +172,7 @@ header{
         align-items: flex-start;
         flex-wrap: wrap;
         box-sizing: border-box;
-        @media #{$tablet767} {
+        @media #{$nHometablet767} {
             padding: 0 15px;
         }
         li{
@@ -182,10 +182,10 @@ header{
             margin: 0 2.5%;
             margin-bottom: 45px;
             box-sizing: border-box;
-            @media #{$tablet767}{
+            @media #{$nHometablet767}{
                  width: 100%;
             }
-            @media #{$phone599}{
+            @media #{$nHomephone599}{
                 padding-top: 50px;
                 margin-bottom: 30px;
             }
@@ -201,13 +201,13 @@ header{
                 margin: 0 auto;
                 background-color: #EDEBEB;
                 color: #C3CF21;
-                font-weight: $bold;
+                font-weight: $nHomebold;
                 font-size: 22px;
             }
         }
     }
     .getbutton{margin-top: 45px;
-        @media #{$tablet767}{
+        @media #{$nHometablet767}{
             margin-top: 30px;
         }
     }
@@ -216,11 +216,11 @@ header{
 /*** Together **/
 .together-wrap{
     padding: 103px 0 64px 0;
-    @media #{$tablet767}{
+    @media #{$nHometablet767}{
         padding: 0px;
     }
     .bg_grey{
-        background: $bggrey;
+        background: $nHomebggrey;
     }
     .container_box{
         max-width: 920px;
@@ -231,16 +231,16 @@ header{
         .left-content{
             padding: 50px 0 50px 100px;
             max-width: 370px;
-            @media #{$tablet767}{
+            @media #{$nHometablet767}{
                 padding: 50px 15px;
                 max-width: 100%;
                 text-align: center;
             }
             p{
-                @include bodycopy;
+                @include body_copy;
                 padding: 10px 0;
                 width: 85%;
-                @media #{$tablet767}{ width: 100%;}
+                @media #{$nHometablet767}{ width: 100%;}
             }
             .getbutton{margin-top: 20px;}
         }
@@ -249,12 +249,12 @@ header{
             top: -100px;
             right: 0;
             width: 26%;
-            @media #{$ipad768} {
+            @media #{$nHomeipad768} {
                 top: -80px;
                 right: 15px;
                 width: 30%;
             }
-            @media #{$tablet767} {
+            @media #{$nHometablet767} {
                 display: none;
             }
             & img{
@@ -267,11 +267,11 @@ header{
 
 /*** Start Exploring Town **/
 .explore_town {
-    @include section-space;
+    @include section_space;
     &_container {
         max-width: 1158px;
         margin: 0 auto;
-        @media #{$tablet767}{
+        @media #{$nHometablet767}{
             padding: 0 15px;
         }
         & h2{
@@ -282,7 +282,7 @@ header{
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
-            @media #{$tablet767}{
+            @media #{$nHometablet767}{
                 margin-bottom: 30px;
             }
             li {
@@ -297,14 +297,14 @@ header{
                 box-shadow: 0 3px 10px 5px rgba(121,116,139,0.2);
                 cursor: pointer;
                 
-                @media #{$desktop1156} {
+                @media #{$nHomedesktop1156} {
                     max-width: 30%;
                     margin: 20px 10px 0 10px;
                 }
-                @media #{$tablet767}{
+                @media #{$nHometablet767}{
                     max-width: 50%;
                 }
-                @media #{$phone599}{
+                @media #{$nHomephone599}{
                     max-width: 85%;
                 }
                 & img {
@@ -326,9 +326,9 @@ header{
                 }
                 .town_name {
                     position: absolute;
-                    font-size: $font24;
-                    font-weight: $bold;
-                    color: $white;
+                    font-size: $nHomefont24;
+                    font-weight: $nHomebold;
+                    color: $nHomewhite;
                     width: 100%;
                     text-align: center;
                     top: 50%;
@@ -351,18 +351,18 @@ header{
 
 /*** Discover **/
 .discover_wrap {
-    @include section-space;
-    background: $bggrey;
+    @include section_space;
+    background: $nHomebggrey;
     padding-top: 40px;
     &_container {
         max-width: 1158px;
         margin: 0 auto;
         .head_with_para{
-            @media #{$tablet767}{
+            @media #{$nHometablet767}{
                 padding: 0 15px;
             }
             p{ width: 50%; margin: 0 auto;
-                @media #{$tablet767}{
+                @media #{$nHometablet767}{
                     width: 100%;
                 }
             }
@@ -384,14 +384,14 @@ header{
         background-color: #FFFFFF;
         box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1);
         @include transtionslow;
-        @media #{$desktop1156} {
+        @media #{$nHomedesktop1156} {
             max-width: 30%;
             margin: 20px 10px;
         }
-        @media #{$tablet767}{
+        @media #{$nHometablet767}{
             max-width: 50%;
         }
-        @media #{$phone599}{
+        @media #{$nHomephone599}{
             max-width: 85%;
         }
         & img {
@@ -404,10 +404,10 @@ header{
         &__title {
           padding: 20px 12px;
           text-align: center;
-          font-size: $font20;
-          line-height: $font24;
-          font-weight: $semibold;
-          color: $greydark;
+          font-size: $nHomefont20;
+          line-height: $nHomefont24;
+          font-weight: $nHomesemibold;
+          color: $nHomegreydark;
         }
         &:hover{
             box-shadow: 0 3px 10px 0 rgba(0,0,0,0.3);
@@ -417,20 +417,20 @@ header{
 
 /*** Feature In **/
 .feature_wrap{
-    @include section-space;
+    @include section_space;
     &__container{
         max-width: 1200px;
         margin: 0 auto;
-        @media #{$desktop1156} {
+        @media #{$nHomedesktop1156} {
             padding: 0 35px;
         }
     }
     & h3{
-        font-size: $font30;
-        color: $greylight;
+        font-size: $nHomefont30;
+        color: $nHomegreylight;
         padding-bottom: 55px;
         text-align: center;
-        font-weight: $semibold;
+        font-weight: $nHomesemibold;
     }
     .feature_slider{
         .slick-slide { padding-top: 4px;
@@ -478,41 +478,41 @@ header{
 
 
 /*** Footer **/
-footer {
-    @include section-space;
-    background: $bggrey;
+.nHome_footer {
+    @include section_space;
+    background: $nHomebggrey;
     padding-top: 40px;
-    @media #{$tablet767}{
+    @media #{$nHometablet767}{
         padding: 40px 0;
     }
     .footer_container {
         max-width: 1250px;
         margin: 0 auto;
-        @media #{$desktop1156} {
+        @media #{$nHomedesktop1156} {
             padding: 0 35px;
         }
         .footerwrap{
             @include flexallcenter;
             justify-content: space-between;
-            @media #{$tablet767}{
+            @media #{$nHometablet767}{
                justify-content: center;
                flex-wrap: wrap;
             }
             .leftfooter
             { display: flex;
                 flex-wrap: wrap;
-                @media #{$tablet767}{
+                @media #{$nHometablet767}{
                     justify-content: center;
                     text-align: center;
                   }
                 p{
-                    @include bodycopy;
+                    @include body_copy;
                     width: 100%;
                     padding: 0 0 8px 0;
                 }
                 .d2{
                     order: 2;
-                    @media #{$tablet767}{
+                    @media #{$nHometablet767}{
                         order: 0;
                         font-size: 14px;
                         padding-top: 5px;
@@ -523,7 +523,7 @@ footer {
                     padding: 10px 0;
                     li{
                         a{
-                            @include bodycopy;
+                            @include body_copy;
                             padding: 5px 0;
                             &:hover{
                                 color: #333;
@@ -535,11 +535,11 @@ footer {
             .rightfooter{
                 text-align: right;
                 padding-top: 10px;
-                @media #{$tablet767}{
+                @media #{$nHometablet767}{
                     text-align: center;
                 }
                 & img{ width: auto; height: 60px; margin-bottom: 35px;
-                    @media #{$tablet767}{
+                    @media #{$nHometablet767}{
                         height: 50px;
                     }
                 }
@@ -550,7 +550,7 @@ footer {
                     {
                         margin: 0 10px;
                         a{
-                            border: 1px solid $greylight;
+                            border: 1px solid $nHomegreylight;
                             border-radius: 50%;
                             width: 30px;
                             height: 30px;
@@ -559,13 +559,13 @@ footer {
                             justify-content: center;
                             svg{
                                 height: 16px;
-                                fill: $greylight;
+                                fill: $nHomegreylight;
                             }
                             &:hover{
-                                background-color: $greydark;
-                                border-color: $greydark;
+                                background-color: $nHomegreydark;
+                                border-color: $nHomegreydark;
                                 svg{
-                                    fill:$white;
+                                    fill:$nHomewhite;
                                 }
                             }
                         }
@@ -579,17 +579,17 @@ footer {
     }
 }
 
-@media #{$tablet767} {
+@media #{$nHometablet767} {
     .hidemobile {display: none;}
     .hidedesktop{ display: block;}
     
 }
 .bannartext_mobile{
-    background-color: $bggrey;
+    background-color: $nHomebggrey;
     padding:30px 30px;
-    @media #{$tablet767} {
-        font-size: $font20;
-        line-height: $font30;
+    @media #{$nHometablet767} {
+        font-size: $nHomefont20;
+        line-height: $nHomefont30;
         text-align: center;
     }
 }

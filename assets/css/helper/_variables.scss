@@ -1,54 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap');
 
 /* iPadPro needs work */
-$iPadPro: "(min-device-width: 1024px) and (max-device-width: 1366px)";
-$tablet: "(min-width: 768px) and (max-width: 1024px)";
-$tabletLandscape: "(min-width: 768px) and (max-width: 1024px) and (orientation : landscape)";
-$desktop: "(min-width: 1024px)";
-$phone: "(min-device-width: 320px) and (max-device-width: 736px)";
-$phone6: "(min-device-width: 375px) and (max-device-width: 667px)";
-$phone6Plus: "(min-device-width: 414px) and (max-device-width: 736px)";
+$nHomeiPadPro: "(min-device-width: 1024px) and (max-device-width: 1366px)";
+$nHometablet: "(min-width: 768px) and (max-width: 1024px)";
+$nHometabletLandscape: "(min-width: 768px) and (max-width: 1024px) and (orientation : landscape)";
+$nHomedesktop: "(min-width: 1024px)";
+$nHomephone: "(min-device-width: 320px) and (max-device-width: 736px)";
+$nHomephone6: "(min-device-width: 375px) and (max-device-width: 667px)";
+$nHomephone6Plus: "(min-device-width: 414px) and (max-device-width: 736px)";
 
 // Custom media
-$desktop1156: "(max-width: 1156px)";
-$ipad1024: "(max-width: 1023px)";
-$ipad768: "(max-width: 990px)";
-$tablet767: "(max-width: 767px)";
-$phone599: "(max-width: 599px)";
-$phone479: "(max-width: 479px)";
+$nHomedesktop1156: "(max-width: 1156px)";
+$nHomeipad1024: "(max-width: 1023px)";
+$nHomeipad768: "(max-width: 990px)";
+$nHometablet767: "(max-width: 767px)";
+$nHomephone599: "(max-width: 599px)";
+$nHomephone479: "(max-width: 479px)";
 // Custom media
 
 //Font Family
-$popineFont: 'Poppins';
-$montserratFont: 'Montserrat';
-$antonFont:'Anton';
+$nHomepopineFont: 'Poppins';
+$nHomemontserratFont: 'Montserrat';
+$nHomeantonFont:'Anton';
 
-$textcenter: center;
+$nHometextcenter: center;
 
-$bolder:800;
-$bold700:700;
-$bold:600;
-$semibold:500;
-$normal:400;
-$light:300;
+$nHomebolder:800;
+$nHomebold700:700;
+$nHomebold:600;
+$nHomesemibold:500;
+$nHomenormal:400;
+$nHomelight:300;
 
-$font16:16px;
-$font20:20px;
-$font24:24px;
-$font26:26px;
-$font30:30px;
-$font36:36px;
-$font48:48px;
+$nHomefont16:16px;
+$nHomefont20:20px;
+$nHomefont24:24px;
+$nHomefont26:26px;
+$nHomefont30:30px;
+$nHomefont36:36px;
+$nHomefont48:48px;
 
 
 // colors
-$white:#fff;
-$black:#000;
-$greydark:#333333;
-$greylight:#9A9A9B;
-$bodycopy:#646A78;
-$gray:#313131;
-$bggrey:#EDEEEE;
+$nHomewhite:#fff;
+$nHomeblack:#000;
+$nHomegreydark:#333333;
+$nHomegreylight:#9A9A9B;
+$nHomebody_copy:#646A78;
+$nHomegray:#313131;
+$nHomebggrey:#EDEEEE;
 
 
 @mixin scale{
@@ -56,9 +56,9 @@ $bggrey:#EDEEEE;
   height:auto; 
   width:auto\9;
 }
-@mixin section-space{
+@mixin section_space{
   padding: 70px 0;
-  @media #{$phone599}{
+  @media #{$nHomephone599}{
     padding: 40px 0;
   }
 }
@@ -90,19 +90,19 @@ $bggrey:#EDEEEE;
   align-items:center;
 }
 
-@mixin bodycopy{
-    color: $greylight;
-    font-family: $montserratFont;
-    font-size: $font16;
-    font-weight: $semibold;
+@mixin body_copy{
+    color: $nHomegreylight;
+    font-family: $nHomemontserratFont;
+    font-size: $nHomefont16;
+    font-weight: $nHomesemibold;
     letter-spacing: 0;
     line-height: 19px;
 }
 
-@mixin subHeading{
-    font-family:$montserratFont;
-    font-weight: $bold700;
-    color:$greydark;
+@mixin sub_Heading{
+    font-family:$nHomemontserratFont;
+    font-weight: $nHomebold700;
+    color:$nHomegreydark;
 }
 
 @mixin afterbefore{
