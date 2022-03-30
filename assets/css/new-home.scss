@@ -83,7 +83,7 @@ h4.h4head{
         justify-content: center;
     }
     .nHome_logo{
-        font-size: 40px;
+        font-size: 37px;
         font-family: $nHomeantonFont;
         padding:12px 42px;
         color: #343434;
@@ -105,9 +105,9 @@ h4.h4head{
 /*** Banner **/
 .banner-main{ 
     text-align: center;
-    background: url(../images/banner01.jpg) no-repeat 50%;
-    background-size: cover;
-    min-height: 571px;
+    background: url(../images/banner01.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    min-height: 542px;
     display: flex;
     justify-content: center;
     align-items: center;

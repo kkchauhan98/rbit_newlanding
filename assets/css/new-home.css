@@ -7,6 +7,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background-color: #F7F7F7;
 }
 
 h1,
@@ -186,7 +187,7 @@ h4.h4head {
   }
 }
 .nHome_header .nHome_logo {
-  font-size: 40px;
+  font-size: 37px;
   font-family: "Anton";
   padding: 12px 42px;
   color: #343434;
@@ -209,9 +210,9 @@ h4.h4head {
 /*** Banner **/
 .banner-main {
   text-align: center;
-  background: url(../images/banner01.jpg) no-repeat 50%;
-  background-size: cover;
-  min-height: 571px;
+  background: url(../images/banner01.jpg) no-repeat top center;
+  background-size: 100% 100%;
+  min-height: 542px;
   display: flex;
   justify-content: center;
   align-items: center;
