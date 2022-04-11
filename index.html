@@ -107,7 +107,7 @@
 <section class="explore_town">
     <div class="explore_town_container">
         <h2 class="subhead textcenter">Start exploring towns </h2>
-        <ul>
+        <ul class="exploreSlider">
             <li>
                 <a href="#">
                     <img src="assets/images/towns/new_york.jpg" alt="" />
@@ -180,7 +180,7 @@
             </li>
             
         </ul>
-        <div class="textcenter"><a href="#" class="getbutton green-btn" id="seeMore">See more</a></div>
+        <!-- <div class="textcenter"><a href="#" class="getbutton green-btn" id="seeMore">See more</a></div> -->
     </div>
 </section>
 
@@ -189,7 +189,7 @@
     <div class="discover_wrap_container">
         <div class="head_with_para">
             <h2 class="subhead textcenter"> Discover a better way "home." </h2>
-            <p class="textcenter">We've helped thousands of people find the right town. Read their stories to learn more. </p>
+            <p class="textcenter">We've helped thousands of people find the right town. Read their <a href="#">stories</a> to learn more. </p>
         </div>
         <div class="card_wrap">
             <div class="card">
@@ -330,42 +330,70 @@ $('.feature_slider').slick({
   ]
 });
 
-});
-
-
-
-
-$("#seeMore").click(function(e){
-    e.preventDefault();
-    $(".explore_town li:hidden").slice(0,3).fadeIn("slow");
-    if($(".explore_town li:hidden").length == 0){
-        $("#seeMore").fadeOut("fast");
-    }
-    // $('html,body').animate({
-    //     scrollTop: $(this).offset().top
-    // }, 3000);
-});
-  
-if (window.matchMedia("only screen and (max-width:767px)").matches) {
-    $(".explore_town li").hide(); 
-    $(".explore_town li").slice(0,3).show(); 
-    $("#seeMore").show();
+// Mobile Only Slider
+mobileOnlySlider(".exploreSlider", false, true, 767);
+function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+	var slider = $($slidername);
+	var settings = {
+		mobileFirst: true,
+		dots: $dots,
+		arrows: $arrows,
+		responsive: [
+			{
+				breakpoint: $breakpoint,
+				settings: "unslick"
+			}
+		]
+	};
+	slider.slick(settings);
+	$(window).on("resize", function () {
+		if ($(window).width() > $breakpoint) {
+			return;
+		}
+		if (!slider.hasClass("slick-initialized")) {
+			return slider.slick(settings);
+		}
+	});
 } 
-else { 
-    $(".explore_town li").show();
-    $("#seeMore").hide();
+
+
+
+
+
+});
+
+
+// $("#seeMore").click(function(e){
+//     e.preventDefault();
+//     $(".explore_town li:hidden").slice(0,3).fadeIn("slow");
+//     if($(".explore_town li:hidden").length == 0){
+//         $("#seeMore").fadeOut("fast");
+//     }
+//     // $('html,body').animate({
+//     //     scrollTop: $(this).offset().top
+//     // }, 3000);
+// });
+  
+// if (window.matchMedia("only screen and (max-width:767px)").matches) {
+//     $(".explore_town li").hide(); 
+//     $(".explore_town li").slice(0,3).show(); 
+//     $("#seeMore").show();
+// } 
+// else { 
+//     $(".explore_town li").show();
+//     $("#seeMore").hide();
     
-    } 
-    $(window).resize(function () { 
-        if (window.matchMedia("only screen and (max-width:767px)").matches) { 
-            $(".explore_town li").hide(); 
-            $(".explore_town li").slice(0,3).show();
-            $("#seeMore").show();
-        } else { 
-            $(".explore_town li").show(); 
-            $("#seeMore").hide();
-        } 
-    });
+//     } 
+//     $(window).resize(function () { 
+//         if (window.matchMedia("only screen and (max-width:767px)").matches) { 
+//             $(".explore_town li").hide(); 
+//             $(".explore_town li").slice(0,3).show();
+//             $("#seeMore").show();
+//         } else { 
+//             $(".explore_town li").show(); 
+//             $("#seeMore").hide();
+//         } 
+//     });
 </script>
 
 </body>
